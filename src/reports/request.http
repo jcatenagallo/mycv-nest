@@ -11,3 +11,13 @@ content-type: application/json
     "lat": 0,
     "mileage": 10000
 }
+
+### Get the current user
+PATCH http://localhost:3000/reports/11
+content-type: application/json
+
+{
+    "approved": false
+}
+
+ 

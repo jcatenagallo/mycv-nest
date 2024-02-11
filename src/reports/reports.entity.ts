@@ -1,10 +1,13 @@
 import { User } from 'src/users/users.entity';
-import { Column, Entity, ManyToOne, PrimaryColumn } from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Report {
-  @PrimaryColumn()
+  @PrimaryGeneratedColumn()
   id: number;
+
+  @Column({ default: false })
+  approved: boolean;
 
   @Column()
   price: number;
